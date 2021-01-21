@@ -5,111 +5,115 @@
     <title>Document</title>
     
     <link rel="shortcut icon" type="image/png" href="favicon.jpg">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
-    <main>
-        <!--HEADER-->
-        <header>
-            <div class="container_header">
-                <img src="/img/logo.png" alt="logo Orinoco">
-                <nav class="menu--nav">
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="#produits">Nos produits</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-                <nav class="menu--compte">
-                    <ul>
-                        <li><a href="#">Mon compte</a></li>
-                        <li><a href="#">Mon panier</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <!--fin HEADER-->
 
-        <!--Section 1-->
-        
-        <section class="section1">
-            <div class="top">
-                <h1>Bienvenue sur Orinoco</h1>
-                <p>Vente d'ours en peluche pour tous ! </p>
-            </div>
-            <img src="/JWDP5/images/teddy_5.jpg" alt="peluche de dos sur un lit">
-        </section>
-        <!--fin section 1-->
-        
-        <!--catégorie produits-->
-        <section id="produits" class="section_produit">
-            <h2>Nos produits</h2>
-            <div class="produit">
-                <div class="container_produit">
-                    <a href="#">
-                        <figure>
-                            <img src="/JWDP5/images/teddy_1.jpg" alt="peluche marron poilue">
-                            <figcaption>
-                                <div>
-                                    <h3>Teddoux</h3>
-                                    <p>Avec Teddoux, vous dormirez paisiblement</p>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </a>
-                    
-                    <a href="#">
-                        <figure>
-                            <img src="/JWDP5/images/teddy_2.jpg" alt="peluche marron poilue">
-                            <figcaption>
-                                <div>
-                                    <h3>Teddoux</h3>
-                                    <p>Avec Teddoux, vous dormirez paisiblement</p>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </a>
-                    
-                    <a href="#">
-                        <figure>
-                            <img src="/JWDP5/images/teddy_3.jpg" alt="peluche marron poilue">
-                            <figcaption>
-                                <div>
-                                    <h3>Teddoux</h3>
-                                    <p>Avec Teddoux, vous dormirez paisiblement</p>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </a>
-                    
-                    <a href="#">
-                        <figure>
-                            <img src="/JWDP5/images/teddy_4.jpg" alt="peluche marron poilue">
-                            <figcaption>
-                                <div>
-                                    <h3>Teddoux</h3>
-                                    <p>Avec Teddoux, vous dormirez paisiblement</p>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </a>
+<body>
+    
+    <!--HEADER-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-orinoco">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="/img/logo.png" alt="logo" width="150">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <a href="panier.html">Mon panier</a>
+                    </form>
                 </div>
             </div>
+        </nav>
+    </header>
+    <!--fin HEADER-->
+    <main>
+        <section>
+            <img src="/JWDP5/images/teddy_5.jpg" alt="peluche de dos sur un lit" class="img-fluid img-banniere">
+            
+            
         </section>
-        <!--FIN catégorie produits-->
+        <figure class="text-center">
+            <H1 class="titre-banniere">Orinoco, vente de peluches en ligne</H1>
+            <figcaption class="blockquote-footer subtitle-banniere">
+                Découvrez notre boutique de peluches exceptionnelles
+            </figcaption>
+        </figure>
 
-        <!--FOOTER-->
-        <footer>
-            <img src="/img/logo.png" alt="logo Orinoco">
-
-            <ul>
-                <li><a href="#produits">Nos produits</a></li>
-                <li>Contact</li>
-            </ul>
-        </footer>
-        <!--FIN FOOTER-->
+        <div class="container products">
+            <section>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                    </div>
+                    <div class="col-4">
+                    </div>
+                </div>
+                
+            </section>
+            
+            
+            
+        </div>
+        
         
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
