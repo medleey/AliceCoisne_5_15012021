@@ -19,4 +19,14 @@
   /*position: relative;*/
   z-index: 2;
 }
+
+.card img {
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.col {
+  margin-bottom: 20px;
+}
 /*# sourceMappingURL=style.css.map */

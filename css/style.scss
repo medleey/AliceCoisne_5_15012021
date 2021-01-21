@@ -18,3 +18,15 @@
     /*position: relative;*/
     z-index: 2;
 }
+
+.card {
+
+    img {
+        height: 120px;
+        object-fit: cover;
+    }
+} 
+
+.col{
+    margin-bottom: 20px;
+}
