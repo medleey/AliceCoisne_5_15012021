@@ -1,24 +1,62 @@
-
+$rose : #f3e9f1;
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
 .bg-orinoco {
-    background-color: #f3e9f1;
+    background-color: $rose;
 }
-.titre-banniere {
-    margin-bottom: 18px;
-}
-.img-banniere {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    position: absolute;
-    z-index: 0;
-}
+header { 
+    .fas {
+        margin-right: 10px;
+        color: violet;
+    }
 
-.subtitle-banniere,.titre-banniere {
+    .basket {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        font-weight: bold;
+    }
+}
+figure.text-center {
     position: relative;
-    z-index: 2;
+    display: flex;
+    
+    img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        z-index: 0;
+    }
+    figcaption {
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position:absolute;
+        z-index: 1;
+        background-color: rgba($color: #f3e9f1, $alpha: 0.3);
+
+        h1 {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 30px;
+        }
+    }
 }
 
+.product-title {
+    font-weight: bold;
+    margin-bottom:20px;
+}
 .card {
 
     img {
@@ -29,4 +67,41 @@
 
 .col{
     margin-bottom: 20px;
+}
+
+footer {
+    position: sticky;
+    margin-top: auto;
+}
+
+/*PAGE PRODUITS*/
+
+.title-products {
+    margin-top: 20px;
+}
+.fiche {
+    width: 100%;
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+.photo-product {
+    img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    box-shadow: lightgray 2px 5px 10px;
+    margin: 0 auto;
+    min-width: 200px;
+    padding: 20px;
+    margin-bottom: 20px;
+    }
+}
+
+/*PAGE COMMANDE*/
+.command {
+    margin-top: 15%;   
 }

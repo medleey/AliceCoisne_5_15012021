@@ -1,23 +1,79 @@
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .bg-orinoco {
   background-color: #f3e9f1;
 }
 
-.titre-banniere {
-  margin-bottom: 18px;
+header .fas {
+  margin-right: 10px;
+  color: violet;
 }
 
-.img-banniere {
+header .basket {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+figure.text-center {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+figure.text-center img {
   width: 100%;
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
-  position: absolute;
   z-index: 0;
 }
 
-.subtitle-banniere, .titre-banniere {
-  position: relative;
-  z-index: 2;
+figure.text-center figcaption {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(243, 233, 241, 0.3);
+}
+
+figure.text-center figcaption h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+figure.text-center figcaption h2 {
+  font-size: 30px;
+}
+
+.product-title {
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .card img {
@@ -28,5 +84,51 @@
 
 .col {
   margin-bottom: 20px;
+}
+
+footer {
+  position: -webkit-sticky;
+  position: sticky;
+  margin-top: auto;
+}
+
+/*PAGE PRODUITS*/
+.title-products {
+  margin-top: 20px;
+}
+
+.fiche {
+  width: 100%;
+  max-width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 5%;
+}
+
+.photo-product img {
+  height: 300px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: lightgray 2px 5px 10px;
+          box-shadow: lightgray 2px 5px 10px;
+  margin: 0 auto;
+  min-width: 200px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/*PAGE COMMANDE*/
+.command {
+  margin-top: 15%;
 }
 /*# sourceMappingURL=style.css.map */
