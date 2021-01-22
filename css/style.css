@@ -11,12 +11,12 @@
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
-  /*position: absolute;*/
+  position: absolute;
   z-index: 0;
 }
 
 .subtitle-banniere, .titre-banniere {
-  /*position: relative;*/
+  position: relative;
   z-index: 2;
 }
 
