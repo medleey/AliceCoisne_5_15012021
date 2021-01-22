@@ -9,13 +9,18 @@ body {
           flex-direction: column;
 }
 
+.btn-primary {
+  background-color: slateblue;
+  border-color: slateblue;
+}
+
 .bg-orinoco {
   background-color: #f3e9f1;
 }
 
 header .fas {
   margin-right: 10px;
-  color: violet;
+  color: slateblue;
 }
 
 header .basket {
@@ -133,9 +138,13 @@ footer {
 }
 
 /*PAGE PANIER*/
+.card-tab {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 .size-tab {
-  overflow-y: auto;
-  min-width: 800px;
+  min-width: 680px;
 }
 
 .tab--1 {
@@ -144,5 +153,10 @@ footer {
 
 .tab--2 {
   width: 200px;
+}
+
+.valid-command {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=style.css.map */
