@@ -1,15 +1,19 @@
-'use strict';
+'use strict'; //retirer les consoles.log avant rendu
 (function() {
-    const teddy = document.getElementById('teddy')
-    const request = new XMLHttpRequest();
-    request.open('GET', 'http://localhost:3000/api/teddies',true);
-    request.send();
+    let url = new URL(window.location.href); //mon URL (dans la barre de recherche)
+    let id = url.searchParams.get("id");
+    console.log(id); //variable
+    
 
-    request.onreadystatechange = () => {
+    const teddy = document.getElementById('teddy')
+    const request = new XMLHttpRequest(); 
+    request.open('GET', 'http://localhost:3000/api/teddies/' + id,true); //('bonjour' + teddy + ' !') = concaténation ajout de chaines de caractères ensemble
+    request.send(); 
+
+    request.onreadystatechange = () => { //prêt quand l'état changera, tu exécuteras la suite
         if (request.readyState == 4 && request.status == 200) { /*readyState == 4 request done && status == 200 == request réussie*/
             const results = JSON.parse(request.responseText); /*JSON.parse transforme les chaines de caractères en objet JSON*/
-            results.forEach(teddy => {
-                console.log(teddy);
+
                 // let name = teddy.name;
                 // let description = teddy.description;
                 // let img = teddy.imageUrl;
@@ -17,7 +21,7 @@
                 //let price = teddy.price
 
                 teddy.innerHTML = `
-                <div class="row id="teddy">
+                <div class="row">
                 <div class="col-md-6 photo-product text-center">
                     <img src="${teddy.imageUrl}" alt="">
                 </div>
@@ -27,13 +31,12 @@
                             <h5 class="card-title">${teddy.name}</h5>
                             <p class="card-text">${teddy.description}</p>
                             <p class="card-text">${teddy.price}</p>
-                            <a href="/basket.html" class="btn btn-primary">Ajouter au panier</a>
+                            <a href="./basket.html" class="btn btn-primary">Ajouter au panier</a>
                         </div>
                     </div>
                 </div>
                 </div>
                 `
-            });
         }
     }
 })()

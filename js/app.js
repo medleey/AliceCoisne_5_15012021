@@ -22,7 +22,7 @@
                         <div class="card-body">
                             <h4 class="card-title">${teddy.name}</h4>
                             <p class="card-text">${teddy.description}</p>
-                            <a href="/products.html?id=${teddy._id}" class="btn btn-primary">Voir la fiche</a>
+                            <a href="./products.html?id=${teddy._id}" class="btn btn-primary">Voir la fiche</a>
                         </div>
                     </div>
                 `
