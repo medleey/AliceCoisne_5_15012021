@@ -18,6 +18,7 @@ body {
   background-color: #f3e9f1;
 }
 
+/*PAGE ACCUEIL*/
 header .fas {
   margin-right: 10px;
   color: slateblue;
@@ -28,6 +29,27 @@ header .basket {
   color: black;
   cursor: pointer;
   font-weight: bold;
+}
+
+.accueil {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.accueil_card {
+  margin-bottom: 20px;
+  padding-top: 20px;
+  cursor: pointer;
+}
+
+.accueil_card:hover {
+  -webkit-box-shadow: lightgray 2px 5px 10px;
+          box-shadow: lightgray 2px 5px 10px;
+  background-color: #f3e9f1;
+}
+
+.accueil_card .icone {
+  color: slateblue;
 }
 
 figure.text-center {
@@ -104,18 +126,11 @@ footer {
 
 .fiche {
   width: 100%;
-  max-width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-top: 5%;
 }
 

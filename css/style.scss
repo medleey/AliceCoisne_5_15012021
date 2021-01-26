@@ -13,6 +13,8 @@ body {
 .bg-orinoco {
     background-color: $rose;
 }
+
+/*PAGE ACCUEIL*/
 header { 
     .fas {
         margin-right: 10px;
@@ -26,6 +28,28 @@ header {
         font-weight: bold;
     }
 }
+
+.accueil {
+    justify-content: space-around;
+}
+
+.accueil_card {
+    margin-bottom: 20px;
+    padding-top: 20px;
+    cursor: pointer;
+
+        &:hover{
+            box-shadow: lightgray 2px 5px 10px;
+            background-color: $rose;
+        }
+
+    .icone {
+        color: slateblue;
+    }
+}
+
+
+
 figure.text-center {
     position: relative;
     display: flex;
@@ -86,11 +110,9 @@ footer {
 }
 .fiche {
     width: 100%;
-    max-width: 80%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    //justify-content: space-between;
     margin-top: 5%;
 }
 .photo-product {
