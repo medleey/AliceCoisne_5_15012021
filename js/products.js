@@ -15,7 +15,7 @@
     
 
     const request = new XMLHttpRequest(); 
-    request.open('GET', 'http://localhost:3000/api/teddies/' + id,true); //('bonjour' + teddy + ' !') = concaténation ajout de chaines de caractères ensemble
+    request.open('GET', 'https://oc-p5-api.herokuapp.com/api/teddies/' + id,true); //('bonjour' + teddy + ' !') = concaténation ajout de chaines de caractères ensemble
     request.send(); 
     
 

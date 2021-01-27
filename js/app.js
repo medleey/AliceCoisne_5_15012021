@@ -2,7 +2,7 @@
 (function() {
     const teddies = document.getElementById('teddies')
     const request = new XMLHttpRequest();
-    request.open('GET', 'http://localhost:3000/api/teddies',true);
+    request.open('GET', 'https://oc-p5-api.herokuapp.com/api/teddies/',true);
     request.send();
 
     request.onreadystatechange = () => {
