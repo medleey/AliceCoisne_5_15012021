@@ -48,7 +48,7 @@ function colors(colors) {
 }
 
 function addBasket(teddy) {
-    
+
     const link = document.getElementById('link_basket');
     link.addEventListener('click', () => { //permet d'ajouter un évènement, ici au click sur le panier
 
@@ -57,9 +57,9 @@ function addBasket(teddy) {
         if (basket === null) {
             basket = []
         }
-        console.log(typeof basket)
+        console.log(basket)
         basket.push(teddy) //mettre danns le tableau
 
-        localStorage.setItem('session_basket', basket)
+        localStorage.setItem('session_basket', JSON.stringify(basket))
     })
 }
