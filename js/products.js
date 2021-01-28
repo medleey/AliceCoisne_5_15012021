@@ -1,37 +1,29 @@
 'use strict'; //retirer les consoles.log avant rendu
 
+(() => { // Une fois que la page est chargé (= window.onload)
+    let id = getIdInurl();
+    setTeddy(id)
+})()
+
 function getIdInurl() {
     let url = window.location.href
     url = new URL(url);
     return url.searchParams.get('id')
 }
 
-(function () {
-
-    let id = getIdInurl();
-    let teddy = getTeddy(id);
-    console.log(teddy)
-
-    showTeddy(teddy);
-
-
-    let result;
-})()
-
-function getTeddy(id) {
+function setTeddy(id) {
     const request = new XMLHttpRequest();
-    request.open('GET', 'https://oc-p5-api.herokuapp.com/api/teddies/' + id, true);
-    request.send();
-
 
     request.onreadystatechange = () => {
         if (request.readyState == 4 && request.status == 200) {
-            let result = JSON.parse(request.responseText);
+            let teddy = JSON.parse(request.responseText);
 
-            return result
-
+            showTeddy(teddy);
         }
     }
+
+    request.open('GET', 'https://oc-p5-api.herokuapp.com/api/teddies/' + id);
+    request.send();
 }
 
 function showTeddy(teddy) {
@@ -39,12 +31,23 @@ function showTeddy(teddy) {
     const html = document.getElementById('teddy');
     const img = document.getElementById('teddy_img');
     const link = document.getElementById('link_basket');
-    img.setAttribute('src', result.imageUrl);
-    img.setAttribute('alt', result.name);
+    img.setAttribute('src', teddy.imageUrl);
+    img.setAttribute('alt', teddy.name);
 
-    teddy_name.innerText = result.name;
-    teddy_description.innerText = result.description;
-    teddy_price.innerText = (result.price / 100 + ' €');
+    teddy_name.innerText = teddy.name;
+    teddy_description.innerText = teddy.description;
+    teddy_price.innerText = (teddy.price / 100 + ' €');
+    colors(teddy.colors)
+}
+
+function colors(colors) {
+    console.log(select_colors);//id du select
+    colors.forEach(color => {
+        select_colors.innerHTML += `
+        <option value="${color}"> ${color} </option>`
+        
+    })
+    console.log(colors)
 }
 
 function addBasket(basket) {

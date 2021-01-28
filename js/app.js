@@ -11,7 +11,7 @@
             results.forEach(teddy => {
 
                 teddies.innerHTML += `
-                <div class="col col-md-4">
+                <div class="col-sm-12 col-md-4 mb-4">
                     <div class="card">
                         <img src="${teddy.imageUrl}" class="card-img-top" alt="peluche brune">
                         <div class="card-body">
