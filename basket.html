@@ -48,7 +48,7 @@
         </nav>
     </header>
     <!--fin HEADER-->
-    <main class="container command">
+    <main class="command">
         <div class="container">
             <div class="row">
                 <div class="card card-tab">
@@ -175,23 +175,40 @@
                 </div>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <a href="command-ok.html" class="btn btn-primary me-md-2 valid-command">
-                            Valider ma commande
+                        Valider ma commande
                     </a>
-                  </div>
-            </div> 
                 </div>
-            </main>
-            <!--FOOTER-->
-            <footer>
-                <nav class="navbar navbar-light bg-orinoco">
-                    <div class="container">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="./img/logo.png" alt="logo" width="90">
-                        </a>
-                    </div>
-                </nav>
-            </footer>
-            <!--fin FOOTER-->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-        </body>
-        </html>
+            </div> 
+            <form class="was-validated">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Adresse mail</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"required>
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1"required>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </main>
+    
+    <!--FOOTER-->
+    <footer>
+        <nav class="navbar navbar-light bg-orinoco">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./img/logo.png" alt="logo" width="90">
+                </a>
+            </div>
+        </nav>
+    </footer>
+    <!--fin FOOTER-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

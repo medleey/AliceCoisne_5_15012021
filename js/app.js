@@ -9,11 +9,6 @@
         if (request.readyState == 4 && request.status == 200) { /*readyState == 4 request done && status == 200 == request réussie*/
             const results = JSON.parse(request.responseText); /*JSON.parse transforme les chaines de caractères en objet JSON*/
             results.forEach(teddy => {
-                console.log(teddy);
-                // let name = teddy.name;
-                // let description = teddy.description;
-                // let img = teddy.imageUrl;
-                // let id = teddy._id;
 
                 teddies.innerHTML += `
                 <div class="col col-md-4">
