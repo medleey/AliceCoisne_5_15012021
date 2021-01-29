@@ -44,10 +44,10 @@
     basket_content.innerHTML +=
         `<tr>
             <td>
-                Price
+                Prix <i>(total en €)</i>
             </td> 
             <td></td>
-            <td>${total_price / 100 + ',00 €'}</td>
+            <td id="price">${total_price / 100 + ',00 €'}</td>
         </tr>`
     let remove_teddy = document.getElementsByClassName('remove_teddy');
     for (let i = 0; i < remove_teddy.length; i++) {
@@ -64,4 +64,13 @@ function remove(e) {
     localStorage.setItem('session_basket', JSON.stringify(basket))
 
     e.target.parentNode.parentNode.remove();
+
+    let total_price = 0; // Je recrée un variable pour le prix qui commence a 0
+    basket.forEach((teddy, index) => { // Je boucle sur tout les teddy restant dans mon panier
+        total_price += teddy.price; // Je concat le prix de chaque teddy dans total_price
+    });
+
+    let price = document.getElementById('price'); // Je recupere l'endroit ou est affiché le prix dans le tableau
+    price.innerText = total_price / 100 + ',00 €' // Je remplace le text
+
 }

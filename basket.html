@@ -55,9 +55,9 @@
                     <table class="table table-hover shopping-cart-wrap size-tab">
                         <thead class="text-muted">
                             <tr>
-                                <th scope="col">Product</th>
-                                <th scope="col" class="tab--1">Quantity</th>
-                                <th scope="col" class="tab--1">Price</th>
+                                <th scope="col">Produits</th>
+                                <th scope="col" class="tab--1">Quantité</th>
+                                <th scope="col" class="tab--1">Prix</th>
                                 <th scope="col" class="text-right tab--2">Action</th>
                             </tr>
                         </thead>
@@ -75,19 +75,36 @@
             </div> 
             <form class="was-validated">
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Adresse mail</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"required>
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <label for="inputLastName" class="form-label">Nom</label>
+                    <input type="lastName" class="form-control" id="inputLastName" placeholder="Votre nom" required>
                 </div>
+
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1"required>
+                    <label for="inputName" class="form-label">Prénom</label>
+                    <input type="name" class="form-control" id="inputName" placeholder="Votre prénom" required>
                 </div>
+
+                <div class="mb-3">
+                    <label for="inputAdress" class="form-label">Adresse</label>
+                    <input type="address" class="form-control" id="inputAdress" placeholder="Votre adresse" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="inputPassword1" class="form-label">Ville</label>
+                    <input type="city" class="form-control" id="inputCity" placeholder="Votre ville" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="inputEmail1" class="form-label">Adresse mail</label>
+                    <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp" placeholder="Votre e-mail" required>
+                    <div id="emailHelp" class="form-text">Nous ne partageons pas vos coordonnées</div>
+                </div>
+                
                 <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <input type="checkbox" class="form-check-input" id="Check1" required>
+                    <label class="form-check-label" for="Check1">Se souvenir de moi</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
             </form>
         </div>
         <p id="total"></p>
