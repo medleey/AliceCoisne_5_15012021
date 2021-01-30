@@ -104,7 +104,7 @@ function submitForm(e) {
             const results = JSON.parse(request.responseText);
             const orderId = results.orderId;
             localStorage.clear();
-            window.location.href = "/command-ok.html?id=" + orderId; 
+            window.location.href = "./command-ok.html?id=" + orderId; 
         }
 
 }}
