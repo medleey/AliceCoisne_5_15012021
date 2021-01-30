@@ -48,6 +48,13 @@ function colors(colors) {
 }
 
 function addBasket(teddy) {
+    const colors_select = document.querySelector('#select_colors');
+    let color = colors_select.value;
+
+
+    colors_select.addEventListener('change', () => {
+        color = colors_select.value;
+    });
 
     const link = document.getElementById('link_basket');
     link.addEventListener('click', () => { //permet d'ajouter un évènement, ici au click sur le panier
@@ -57,7 +64,8 @@ function addBasket(teddy) {
         if (basket === null) {
             basket = []
         }
-        console.log(basket)
+        teddy.color = color;
+        
         basket.push(teddy) //mettre danns le tableau
 
         localStorage.setItem('session_basket', JSON.stringify(basket))

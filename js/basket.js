@@ -3,6 +3,10 @@
 
     let basket = JSON.parse(localStorage.getItem('session_basket'))
     let total_price = 0;
+    if (basket === null) {
+        return false;
+    }
+
     basket.forEach((teddy, index) => {
         total_price += teddy.price
         basket_content.innerHTML += `
@@ -38,7 +42,6 @@
                                 </td>
                             </tr>
                     `
-
     })
 
     basket_content.innerHTML +=
@@ -87,13 +90,22 @@ function submitForm(e) {
 
     const request = new XMLHttpRequest();
     request.open('POST', 'https://oc-p5-api.herokuapp.com/api/teddies/order',true);
-    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    request.send();
+    request.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+
+    const params = {
+        'contact': formContent,
+        'products': basket
+    };
+
+    request.send(JSON.stringify(params));
 
     request.onreadystatechange = () => {
-        if (request.readyState == 4 && request.status == 200) { 
+        if (request.readyState == 4 && request.status == 201) { 
             const results = JSON.parse(request.responseText);
-    }}
+            const orderId = results.orderId;
+            localStorage.clear();
+            window.location.href = "/command-ok.html?id=" + orderId; 
+        }
 
-}
+}}
 

@@ -174,4 +174,10 @@ footer {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+/* PAGE COMMANDE*/
+#orderId {
+  font-weight: bold;
+  color: slateblue;
+}
 /*# sourceMappingURL=style.css.map */
