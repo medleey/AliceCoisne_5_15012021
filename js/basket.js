@@ -5,7 +5,6 @@
     let total_price = 0;
     basket.forEach((teddy, index) => {
         total_price += teddy.price
-        console.log(total_price)
         basket_content.innerHTML += `
         <tr>
                                 <td>
@@ -39,6 +38,7 @@
                                 </td>
                             </tr>
                     `
+
     })
 
     basket_content.innerHTML +=
@@ -54,12 +54,14 @@
         remove_teddy[i].addEventListener('click', remove)
     }
 
+    const form = document.querySelector('#form1');
+    form.addEventListener('submit', submitForm); // Quand on soumet le form avec le bouton type submit
+
 })()
 
 function remove(e) {
     let i = e.target.getAttribute('data-id');
     let basket = JSON.parse(localStorage.getItem('session_basket'))
-    console.log(basket)
     basket.splice(i, 1);
     localStorage.setItem('session_basket', JSON.stringify(basket))
 
@@ -75,8 +77,23 @@ function remove(e) {
 
 }
 
-function form() { 
+function submitForm(e) { 
+    e.preventDefault(); // sert a annuler l'envoi du formulaire pour ne pas recharger la page
+    const form = document.querySelector('#form1');
+    const formData = new FormData(form) //formData classe qui permet de récupérer ton formulaire
+    console.log(Object.fromEntries(formData.entries()));
+    let formContent = Object.fromEntries(formData.entries());
+    let basket = JSON.parse(localStorage.getItem('session_basket'));
 
-    const formData = new FormData(document.querySelector('form'))
+    const request = new XMLHttpRequest();
+    request.open('POST', 'https://oc-p5-api.herokuapp.com/api/teddies/order',true);
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    request.send();
+
+    request.onreadystatechange = () => {
+        if (request.readyState == 4 && request.status == 200) { 
+            const results = JSON.parse(request.responseText);
+    }}
 
 }
+
