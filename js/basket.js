@@ -74,3 +74,9 @@ function remove(e) {
     price.innerText = total_price / 100 + ',00 €' // Je remplace le text
 
 }
+
+function form() { 
+
+    const formData = new FormData(document.querySelector('form'))
+
+}
