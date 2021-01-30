@@ -12,7 +12,7 @@
 
                 header.innerHTML += `
                     <li>
-                        <a class="dropdown-item" href="/products.html?id=${teddy._id}">${teddy.name}</a>
+                        <a class="dropdown-item" href="./products.html?id=${teddy._id}">${teddy.name}</a>
                     </li>
                 `
             });
