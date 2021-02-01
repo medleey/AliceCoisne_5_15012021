@@ -39,13 +39,6 @@ header .basket {
 .accueil_card {
   margin-bottom: 20px;
   padding-top: 20px;
-  cursor: pointer;
-}
-
-.accueil_card:hover {
-  -webkit-box-shadow: lightgray 2px 5px 10px;
-          box-shadow: lightgray 2px 5px 10px;
-  background-color: #f3e9f1;
 }
 
 .accueil_card .icone {

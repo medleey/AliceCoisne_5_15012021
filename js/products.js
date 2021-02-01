@@ -1,23 +1,20 @@
 'use strict'; //retirer les consoles.log avant rendu
 
 (() => { // Une fois que la page est chargé (= window.onload)
-    let id = getIdInurl();
+    let id = getIdInUrl(window.location.href);
     setTeddy(id)
 })()
 
-function getIdInurl() {
-    let url = window.location.href
+function getIdInUrl(url) {
     url = new URL(url);
     return url.searchParams.get('id')
 }
 
 function setTeddy(id) {
     const request = new XMLHttpRequest();
-
     request.onreadystatechange = () => {
         if (request.readyState == 4 && request.status == 200) {
             let teddy = JSON.parse(request.responseText);
-
             showTeddy(teddy);
             addBasket(teddy)
         }
@@ -37,6 +34,7 @@ function showTeddy(teddy) {
     teddy_description.innerText = teddy.description;
     teddy_price.innerText = (teddy.price / 100 + ' €');
     colors(teddy.colors)
+    
 }
 
 function colors(colors) {
@@ -47,11 +45,10 @@ function colors(colors) {
     })
 }
 
+
 function addBasket(teddy) {
     const colors_select = document.querySelector('#select_colors');
     let color = colors_select.value;
-
-
     colors_select.addEventListener('change', () => {
         color = colors_select.value;
     });
@@ -65,9 +62,7 @@ function addBasket(teddy) {
             basket = []
         }
         teddy.color = color;
-        
         basket.push(teddy) //mettre danns le tableau
-
         localStorage.setItem('session_basket', JSON.stringify(basket))
     })
 }
